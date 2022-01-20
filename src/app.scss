@@ -1,0 +1,28 @@
+.app {
+  height: 100vh;
+
+  .sections {
+    width: 100%;
+    height: calc(100vh - 70px); //상단바 고정
+    background-color: lightsalmon;
+    position: relative;
+    top: 70px; //70px이후부터 시작할 수 있도록
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    //스크롤 작업 완료되면 해당 지점에서 스냅
+    scrollbar-width: none; //for firefox
+
+    // &::-webkit-scrollbar {
+    //   display: none;
+    // }
+    //스크롤바 안보이게
+
+    > * {
+      width: 100vw;
+      height: calc(100vh - 70px);
+      scroll-snap-align: start;
+      //조금만 스크롤하고 마우스 옮길경우
+      //가장 가까운 섹션의 시작점으로 간다.
+    }
+  }
+}

@@ -1,0 +1,69 @@
+.intro {
+  background-color: white;
+  display: flex;
+
+  .left {
+    flex: 0.5;
+    overflow: hidden;
+
+    .imageContainer {
+      width: 700px;
+      height: 500px;
+
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      float: right;
+
+      img {
+        height: 90%;
+      }
+    }
+  }
+
+  .right {
+    flex: 0.5;
+    position: relative;
+
+    .wrapper {
+      width: 100%;
+      height: 100%;
+      padding-left: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h1 {
+        font-size: 60px;
+        margin: 10px 0;
+      }
+      h2 {
+        font-size: 35px;
+      }
+      h3 {
+        font-size: 30px;
+
+        span {
+          font-size: inherit;
+          color: burlywood;
+        }
+      }
+    }
+    a {
+      position: absolute;
+      bottom: 10px;
+      left: 30%;
+    }
+    .icon {
+      font-size: 60px;
+      color: black;
+      animation: arrowBlink 2s infinite; //화살표 2초뒤에 불투명하게 만들기
+    }
+
+    @keyframes arrowBlink {
+      100% {
+        opacity: 0;
+      }
+    }
+  }
+}
